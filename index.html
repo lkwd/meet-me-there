@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meet Me There | Your next hangout has a sea view</title>
+<meta name="description" content="Welcome to Meet Me There, a new roleplay experience on Roblox with fashion at its heart. Dress up, meet your friends, hit the dance floor, or head out on the water.">
+<meta name="theme-color" content="#1C1C45">
+<!-- Temporary host: keep search engines off this copy. EDIT: remove this line on the final domain. -->
+<meta name="robots" content="noindex">
+<!-- EDIT: og:url and og:image must be full URLs on whichever domain serves the site -->
+<meta property="og:title" content="Meet Me There">
+<meta property="og:url" content="https://lkwd.github.io/meet-me-there/">
+<meta property="og:description" content="Your next hangout has a sea view. A new roleplay experience on Roblox with fashion at its heart.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://lkwd.github.io/meet-me-there/assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23E8197D'/><path d='M32 46s-14-8.4-14-18a8 8 0 0 1 14-5.3A8 8 0 0 1 46 28c0 9.6-14 18-14 18z' fill='%23fff'/></svg>">
+<link rel="preload" href="assets/img/hero.webp" as="image">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <nav class="nav" aria-label="Main">
+    <a class="home" href="#top">Meet Me There</a>
+    <ul>
+      <li class="link"><a href="#events">Events</a></li>
+      <li class="link"><a href="#aboard">On board</a></li>
+      <li class="link"><a href="#build">Get involved</a></li>
+      <li class="keep"><a href="faq/">FAQs</a></li>
+      <!-- Play links come from assets/js/config.js (links.play) and stay hidden until it is set -->
+      <li data-link="play" hidden><a class="btn btn-play" href="#">Play</a></li>
+    </ul>
+  </nav>
+  <picture>
+    <source srcset="assets/img/hero.webp" type="image/webp">
+    <img src="assets/img/hero.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+  </picture>
+  <div class="hero-inner">
+    <h1>Your next hangout has a sea view.</h1>
+    <div class="hero-copy">
+      <p>Welcome to Meet Me There, a new roleplay experience on Roblox with fashion at its heart.</p>
+      <p>Dress up, meet your friends, hit the dance floor, or head out on the water. There's a whole yacht to explore, and what happens next is up to you.</p>
+    </div>
+    <div class="hero-row">
+      <a class="btn btn-play" data-link="play" href="#" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+        Play on Roblox
+      </a>
+      <span class="btn btn-soon" data-fallback="play" data-after-launch="Now open on Roblox">Launching 9 November on Roblox</span>
+      <a class="down" href="#trailer"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></i>Watch the Trailer</a>
+    </div>
+    <p class="launch" id="launch"><i aria-hidden="true"></i><span data-after-launch="Now open on Roblox">All aboard 9 November 2026</span></p>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="trailer" id="trailer" aria-labelledby="trailer-h">
+    <div class="trailer-head">
+      <h2 id="trailer-h">Begin Your Charter</h2>
+      <p class="lede">From the main deck to the island, there's plenty to explore. Get a first look at your new favourite place to hang out.</p>
+    </div>
+    <div class="frame">
+      <video id="trailerVideo" controls playsinline preload="none" poster="assets/video/trailer-poster.webp">
+        <source src="assets/video/trailer.webm" type="video/webm">
+        <source src="assets/video/trailer.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="assets/video/trailer.mp4">Download the trailer</a>.
+      </video>
+      <button class="cover" id="trailerCover" type="button" aria-label="Play the trailer" hidden>
+        <img src="assets/video/trailer-poster.webp" alt="">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="section events" id="events" aria-labelledby="events-h">
+    <div class="inner">
+      <div class="head-row">
+        <h2 id="events-h">What's happening on board?</h2>
+        <p class="lede">There's always a reason to dress up in Meet Me There. Discover themed parties, seasonal events and special moments. Take a look to see what's happening on board.</p>
+      </div>
+      <!-- EDIT: confirm event names, timing and descriptions before launch -->
+      <div class="ev-grid">
+        <article class="ev" style="--a:#028090;--b:#1C1C45">
+          <span class="ev-when">December</span>
+          <svg class="ev-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6v36M8.4 15l31.2 18M8.4 33l31.2-18"/><path d="M19 9l5 4 5-4M19 39l5-4 5 4M8 21l6-1-2-6M40 27l-6 1 2 6M8 27l6 1-2 6M40 21l-6-1 2-6"/></svg>
+          <h3>Christmas</h3>
+          <p>Festive lights, winter fits and holiday parties aboard.</p>
+        </article>
+        <article class="ev" style="--a:#E8197D;--b:#1C1C45">
+          <span class="ev-when">31 December</span>
+          <svg class="ev-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M24 24V8M24 24l11-11M24 24h16M24 24l11 11M24 24l-11 11M24 24H8M24 24L13 13"/><circle cx="24" cy="24" r="3"/></svg>
+          <h3>New Year's Eve</h3>
+          <p>A countdown party with fireworks over the water.</p>
+        </article>
+        <a class="ev ev-vote" href="#build">
+          <span class="ev-when">You decide</span>
+          <svg class="ev-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h28a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H22l-8 7v-7h-4a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z"/><path d="M17 22.5h.01M24 22.5h.01M31 22.5h.01"/></svg>
+          <h3>What's Next?</h3>
+          <p>Got an idea for the next big event? We want to hear it. <span class="arrow">Have Your Say</span></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section aboard-wrap" id="aboard" aria-labelledby="aboard-h">
+    <div class="inner">
+      <div class="head-row">
+        <h2 id="aboard-h">Life Aboard</h2>
+        <p class="lede">Dance battles? A trip to the island? Just here for the vibes? There's no set way to spend your time on board. Find your thing and make yourself at home.</p>
+      </div>
+      <!-- EDIT: each card's status. Use class="pill" with "On board" for open activities and class="pill soon" with "Coming aboard" for teased ones. -->
+      <div class="acts">
+        <article class="act feature">
+          <div class="ph"><img src="assets/img/dance.webp" alt="Two players in a Dance Battle under neon lights" loading="lazy" width="1280" height="720"><span class="pill">On board</span></div>
+          <div class="body"><h3>Dance Battle</h3><p>Think you've got the moves? Take on your friends in a Dance Battle. Hit the steps on cue, build your combos and see who comes out on top.</p></div>
+        </article>
+        <article class="act feature">
+          <div class="ph"><img src="assets/img/scene.webp" alt="A player walking the catwalk while others rate the look" loading="lazy" width="1200" height="562"><span class="pill soon">Coming aboard</span></div>
+          <div class="body"><h3>Fashion</h3><p>Got a look worth showing off? Get ready to style, strut and take to the catwalk. Fashion is getting its moment on deck, and you'll want to be there.</p></div>
+        </article>
+        <article class="act">
+          <div class="ph"><img src="assets/img/bar-shift.webp" alt="A player serving drinks during a shift at the yacht bar" loading="lazy" width="1280" height="720"><span class="pill">On board</span></div>
+          <div class="body"><h3>The Bar</h3><p>Smoothies, anyone? Get behind the bar, take orders, and earn Coins while you work. Or grab a seat, catch up with friends, and enjoy the view.</p></div>
+        </article>
+        <article class="act">
+          <div class="ph"><img src="assets/img/stones.webp" alt="Stepping stones across turquoise water near the island" loading="lazy" width="1200" height="790"><span class="pill">On board</span></div>
+          <div class="body"><h3>Explore</h3><p>Fancy getting away from the crowd? Hop on the jet tender and head to the island. Follow the stepping stones, explore your surroundings, and collect your daily reward.</p></div>
+        </article>
+        <article class="act">
+          <div class="ph"><img src="assets/img/arrive.webp" alt="Players hanging out on the yacht's main deck" loading="lazy" width="1200" height="648"><span class="pill">On board</span></div>
+          <div class="body"><h3>Roleplay &amp; Hang Out</h3><p>Who are you going to be today? Pick a role, put together a look, and make your own story. Or find a spot on deck and meet someone new.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="journey-h">
+    <div class="inner">
+      <div class="head-row">
+        <h2 id="journey-h">Your voyage. Your day. Your rules.</h2>
+        <p class="lede">There's no right way to experience Meet Me There. Here's a taste of what you can get up to.</p>
+      </div>
+      <ol class="journey">
+        <li style="--c:var(--magenta)"><div class="shot"><img src="assets/img/island.webp" alt="The island at sunset with the yacht on the horizon" loading="lazy" style="object-position:58% 50%"></div><span class="num" aria-hidden="true">01</span><h3>Arrive</h3><p>First stop, the island. Make your way across the Floating Port and head aboard. Your yacht life starts here.</p></li>
+        <li style="--c:var(--purple)"><div class="shot"><img src="assets/img/explore.webp" alt="A jet tender crossing the sea towards the yacht" loading="lazy"></div><span class="num" aria-hidden="true">02</span><h3>Explore</h3><p>Take a look around the yacht or hop on the tender and head out to the island. There's plenty to discover.</p></li>
+        <li style="--c:var(--teal)"><div class="shot"><img src="assets/img/bar.webp" alt="The yacht bar at sunset" loading="lazy" style="object-position:40% 50%"></div><span class="num" aria-hidden="true">03</span><h3>Find Your Scene</h3><p>Dance floor, bar, open water or roleplay with friends? Whatever you're in the mood for, there's a place for you.</p></li>
+        <li style="--c:var(--orange)"><div class="shot"><img src="assets/img/noticed.webp" alt="A winner on the podium" loading="lazy" style="object-position:45% 50%"></div><span class="num" aria-hidden="true">04</span><h3>Get Rewarded</h3><p>Earn XP, collect Coins and unlock achievements as you play. There's always something to work towards.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section opening" id="opening" aria-labelledby="opening-h">
+    <div class="inner">
+      <div class="head-row">
+        <h2 id="opening-h">There's more on the way</h2>
+        <p class="lede">New areas, activities, and events will be arriving over time. Keep your eyes open while you're exploring. You never know what might be opening next.</p>
+      </div>
+      <div class="open-grid">
+        <ol class="rhythm" aria-label="How new things arrive">
+          <li style="--c:var(--magenta)"><b>Spot Something New</b><span>A locked door? A little hint from a host? Keep an eye out for clues around the yacht.</span></li>
+          <li style="--c:var(--violet)"><b>Get Talking</b><span>Think you know what's coming? Share your theories with the community on Discord or in the Roblox group.</span></li>
+          <li style="--c:var(--purple)"><b>Get a First Look</b><span>Keep an eye on our creators for a sneak peek at what's coming aboard.</span></li>
+          <li style="--c:var(--teal)"><b>It's Here!</b><span>New places to explore, activities to try and events to enjoy. Time to see what all the excitement was about.</span></li>
+          <li style="--c:var(--orange)"><b>Tell Us What You Think</b><span>Loving the new addition? Got ideas for how we could make it better? We want to hear from you.</span></li>
+          <li style="--c:var(--magenta)"><b>And Then?</b><span>You guessed it. There's more to come.</span></li>
+        </ol>
+        <div class="teaser">
+          <img src="assets/img/teaser.webp" alt="" loading="lazy">
+          <span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
+          <div class="cap"><b>What's behind that door?</b><span>Some parts of the yacht are still under wraps. Keep an eye out. You might just spot what's coming next.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="build" aria-labelledby="build-h">
+    <div class="inner">
+      <div class="head-row">
+        <h2 id="build-h">Help shape what's next</h2>
+        <p class="lede"><strong>You've got ideas. We want to hear them.</strong> From new places to explore to the next big party, we want our community to have a say in what comes aboard.</p>
+      </div>
+      <div class="build-grid">
+        <div>
+          <div class="votes">
+            <div class="vote" style="--c:var(--magenta)"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span><b>What should we add next?</b><small>Tell us which new areas you'd love to explore.</small></span></div>
+            <div class="vote" style="--c:var(--purple)"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17M3.5 12h17"/></svg></span><span><b>What's the next theme?</b><small>More parties? Different vibes? Let us know what you'd like to see.</small></span></div>
+            <div class="vote" style="--c:var(--teal)"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l-4 3 2 4 2-1v10h8V10l2 1 2-4-4-3c-.5 1.5-2 2.5-4 2.5S8.5 5.5 8 4z"/></svg></span><span><b>What's missing from your wardrobe?</b><small>Tell us which styles and items you'd love to get your hands on.</small></span></div>
+            <div class="vote" style="--c:var(--orange)"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><span><b>What's worth celebrating?</b><small>Help us choose the next party or seasonal event.</small></span></div>
+          </div>
+          <ul class="ways" aria-label="Ways to take part"><li>Playtests</li><li>Community Votes</li><li>Feedback Sessions</li></ul>
+          <p class="closing">Your feedback matters. Tell us what you love, what could be better, and what you'd like to see next.</p>
+        </div>
+        <!-- EDIT: Founding Crew benefits are subject to final approval -->
+        <aside class="crewcard" aria-labelledby="crew-h">
+          <h3 id="crew-h">Get in early. Join the Founding Crew.</h3>
+          <p>Want to be part of Meet Me There from the start? Join the Founding Crew for a chance to help shape the experience, get involved in early playtests and enjoy some exclusive extras.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>First access to new drops</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Priority access to beta playtests</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>An exclusive launch item</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Your name in the credits</li>
+          </ul>
+          <div class="hero-actions">
+            <!-- Community links come from assets/js/config.js (links.discord, links.group) -->
+            <a class="btn btn-line" data-link="discord" href="#" hidden>Join Our Discord</a>
+            <a class="btn btn-ghost" data-link="group" href="#" hidden>Join the Roblox Group</a>
+          </div>
+          <small data-link="discord group" hidden>Spaces are limited. Join the community to find out how to get involved.</small>
+          <small data-fallback="discord group">Spaces are limited. Our Discord and Roblox group open soon, and that's where we'll share how to get involved.</small>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="help" id="help" aria-labelledby="help-h">
+    <div>
+      <h2 id="help-h">Need a hand?</h2>
+      <p class="lede">Got a question? We've got you. Here are some of the most common ones, with more answers on our Help &amp; FAQs page.</p>
+      <ul class="faq-links">
+        <li><a href="faq/#what-is-meet-me-there">What is Meet Me There?</a></li>
+        <li><a href="faq/#how-to-play">How do I start playing?</a></li>
+        <li><a href="faq/#missing-purchase">I bought something and didn't receive it. What should I do?</a></li>
+        <li><a href="faq/#report-player">How do I report another player?</a></li>
+        <li><a href="faq/#parents">I'm a parent. How do I keep my child safe on Roblox?</a></li>
+      </ul>
+      <a class="btn btn-play" href="faq/">See all FAQs</a>
+    </div>
+
+    <aside class="contact" aria-labelledby="contact-h">
+      <h3 id="contact-h">Still need help?</h3>
+      <div data-link="support" hidden>
+        <p>Something not working? Get in touch with our support team. Include your Roblox username and a quick description of the issue so we can help.</p>
+        <a class="btn btn-play" href="#">Email Support</a>
+      </div>
+      <div data-fallback="support">
+        <p>Our support inbox opens soon. For anything to do with your Roblox account, Robux payments or safety, Roblox Support can help right now.</p>
+        <a class="btn btn-play" href="https://www.roblox.com/support">Roblox Support</a>
+      </div>
+      <ul>
+        <li data-link="terms" hidden><a href="#">Terms of Service<span aria-hidden="true">›</span></a></li>
+        <li data-link="privacy" hidden><a href="#">Privacy Policy<span aria-hidden="true">›</span></a></li>
+        <li><a href="faq/#parents">For parents<span aria-hidden="true">›</span></a></li>
+      </ul>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="by"><a class="home" href="#top">Meet Me There</a><span>Made by <a href="https://www.lockwood-publishing.com">Lockwood Publishing</a></span></div>
+    <ul>
+      <li><a href="faq/">Help and FAQs</a></li>
+      <li><a href="faq/#parents">For parents</a></li>
+      <li data-link="terms" hidden><a href="#">Terms of Service</a></li>
+      <li data-link="privacy" hidden><a href="#">Privacy Policy</a></li>
+      <li data-link="support" hidden><a href="#">Contact us</a></li>
+    </ul>
+  </div>
+  <div class="legal">
+    <p>&copy; <span id="year">2026</span> Lockwood Publishing. All rights reserved.</p>
+    <p>Roblox is a trademark of Roblox Corporation. Meet Me There is not sponsored, authorised or endorsed by Roblox Corporation.</p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

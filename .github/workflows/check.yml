@@ -1,0 +1,19 @@
+name: Check site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Links, anchors and placeholders
+        run: python3 tools/check.py
+      - name: HTML validation
+        run: npx --yes html-validate@11.18.0 "index.html" "404.html" "faq/index.html"
