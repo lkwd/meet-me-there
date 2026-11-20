@@ -101,6 +101,11 @@ similar) must not be added until a consent setup is in place.
 
 - **Fonts:** Helvetica Neue / Helvetica, falling back to Arial. No web fonts
   are loaded.
+- **Images:** screenshots are 1280×720 WebP. The "Your voyage" cards crop to
+  4:5 on desktop, so `island.webp` (Arrive, the logo card) is a 1080×1350
+  composite: the 16:9 frame scaled 1.55× over a heavily blurred copy of
+  itself, feathered top and bottom. Rebuild it that way if it's replaced, or
+  the logo gets cropped. Card crops are set with `--pos` / `--pos-m`.
 - **Video:** the 22-second reveal trailer as WebM (VP9, about 8 MB) and MP4
   (H.264, about 9.5 MB). The trailer only
   downloads when someone presses play. Without JavaScript, the native video
