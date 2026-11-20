@@ -101,7 +101,8 @@ similar) must not be added until a consent setup is in place.
 
 - **Fonts:** Helvetica Neue / Helvetica, falling back to Arial. No web fonts
   are loaded.
-- **Video:** WebM (VP9) and MP4 (H.264), about 12.5 MB each. The trailer only
+- **Video:** the 22-second reveal trailer as WebM (VP9, about 8 MB) and MP4
+  (H.264, about 9.5 MB). The trailer only
   downloads when someone presses play. Without JavaScript, the native video
   controls are used.
 - **Colour:** white text on the brand pink (#E8197D) is below WCAG AA contrast.

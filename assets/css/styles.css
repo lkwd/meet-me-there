@@ -37,6 +37,7 @@ h2{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 /* Nav */
 .nav{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:calc(18px + env(safe-area-inset-top,0px)) var(--pad) 18px}
 .nav .home{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;color:#fff;text-decoration:none;text-shadow:0 2px 14px rgba(28,28,69,.35)}
+.nav .home img{display:block;height:clamp(46px,4.6vw,64px);width:auto;filter:drop-shadow(0 4px 14px rgba(28,28,69,.35))}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:clamp(12px,2.4vw,30px)}
 .nav ul a{color:#fff;text-decoration:none;font-weight:600;text-shadow:0 2px 12px rgba(28,28,69,.4)}
 .nav ul a:hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
@@ -69,7 +70,8 @@ h2{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 .frame video{width:100%;aspect-ratio:16/9;object-fit:cover}
 .frame button.cover{position:absolute;inset:0;display:grid;place-items:center;border:0;padding:0;cursor:pointer;background:transparent}
 .frame button.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.frame button.cover span{position:relative;width:clamp(68px,9vw,96px);height:clamp(68px,9vw,96px);border-radius:50%;background:var(--magenta);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(232,25,125,.25);transition:transform .2s}
+/* EDIT: top offsets the play button below the logo in the current poster (assets/video/trailer-poster.webp); set 0 to centre it */
+.frame button.cover span{position:relative;top:14%;width:clamp(68px,9vw,96px);height:clamp(68px,9vw,96px);border-radius:50%;background:var(--magenta);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(232,25,125,.25);transition:transform .2s}
 .frame button.cover:hover span{transform:scale(1.06)}
 .frame button.cover svg{width:34%;height:34%;margin-left:6%;fill:#fff}
 
@@ -219,6 +221,7 @@ h2{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 footer{background:var(--navy);color:#C9C3E8;padding:48px var(--pad) calc(40px + env(safe-area-inset-bottom,0px));font-size:.92rem}
 .foot{max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 40px;align-items:center}
 .foot .by{display:flex;flex-direction:column;gap:2px}
+.foot .by .home img{display:block;height:64px;width:auto;margin:0 0 8px -4px}
 .foot .by span{font-size:.85rem}
 .foot .by span a{text-decoration:underline;text-underline-offset:3px}
 .foot .home{font-family:var(--display);font-weight:700;color:#fff;font-size:1.3rem;text-decoration:none}
@@ -253,6 +256,7 @@ footer{background:var(--navy);color:#C9C3E8;padding:48px var(--pad) calc(40px + 
   .journey{grid-template-columns:1fr}
   .journey .shot{aspect-ratio:16/10}
   .journey .shot img{object-position:var(--pos-m,var(--pos,50% 50%))}
+  .frame button.cover span{top:22%;width:56px;height:56px;box-shadow:0 0 0 8px rgba(232,25,125,.25)}
   .rhythm{grid-template-columns:1fr 1fr}
   .ev-grid{grid-template-columns:1fr}
   .ev{min-height:230px}
