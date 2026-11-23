@@ -112,15 +112,10 @@ similar) must not be added until a consent setup is in place.
 
 - **Fonts:** Helvetica Neue / Helvetica, falling back to Arial. No web fonts
   are loaded.
-- **Images:** screenshots are 1280×720 WebP. The "Your voyage" cards crop to
-  4:5 on desktop, so `island.webp` (Arrive, the logo card) is a 1080×1350
-  composite: the 16:9 frame scaled 1.55× over a heavily blurred copy of
-  itself, feathered top and bottom. Rebuild it that way if it's replaced, or
-  the logo gets cropped. Card crops are set with `--pos` / `--pos-m`.
-- **Explore card (test):** `explore-social.webp` is Vanessa's 1080×1350 social
-  image, on trial since 2026-11-23. It keeps 4:5 on phones (`--ar-m:4/5` on
-  its `.shot`). To go back, point the card at `explore.webp` with
-  `style="--pos:36% 50%"` and drop `--ar-m`.
+- **Images:** screenshots are 1280×720 WebP. The four "Your voyage" cards
+  (`voyage-*.webp`) are designed 4:5 posters from Vanessa (about 1020×1283,
+  2026-11-23) with the logo along the bottom, so they show uncropped at 4:5 on
+  every screen. Replace them with images of the same shape.
 - **Video:** the 22-second reveal trailer as WebM (VP9, about 8 MB) and MP4
   (H.264, about 9.5 MB). The trailer only
   downloads when someone presses play. Without JavaScript, the native video

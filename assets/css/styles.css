@@ -118,8 +118,8 @@ h2{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 .journey{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:j}
 .journey li{position:relative}
 .journey .shot{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--lilac-2)}
-/* EDIT: crop focus per card via style="--pos:x% y%"; --pos-m overrides it on phones, where the card is 16:10.
-   A designed 4:5 poster can keep its shape on phones with style="--ar-m:4/5" on its .shot */
+/* Cards are designed 4:5 posters with the logo along the bottom, so they keep 4:5 on every screen.
+   EDIT: if a card ever needs cropping, set its focus with style="--pos:x% y%" on the img */
 .journey .shot img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 50%)}
 .journey .num{position:absolute;left:14px;top:14px;width:44px;height:44px;font-size:1rem;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font-family:var(--display);font-weight:700;box-shadow:0 6px 18px -6px rgba(28,28,69,.6)}
 .journey h3{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:-.02em;margin:16px 0 0}
@@ -259,8 +259,6 @@ footer{background:var(--navy);color:#C9C3E8;padding:48px var(--pad) calc(40px + 
   .acts{grid-template-columns:1fr}
   .act.feature{grid-column:span 1}
   .journey{grid-template-columns:1fr}
-  .journey .shot{aspect-ratio:var(--ar-m,16/10)}
-  .journey .shot img{object-position:var(--pos-m,var(--pos,50% 50%))}
   .frame button.cover span{top:22%;width:56px;height:56px;box-shadow:0 0 0 8px rgba(232,25,125,.25)}
   .rhythm{grid-template-columns:1fr 1fr}
   .ev-grid{grid-template-columns:1fr}
