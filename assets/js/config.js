@@ -12,7 +12,7 @@ window.MMT = {
     support: "",  // EDIT: support email address only, e.g. help@example.org (becomes a mailto: link)
     terms: "",    // EDIT: Terms of Service URL
     privacy: "",  // EDIT: Privacy Policy URL
-    discord: "",  // EDIT: Discord invite URL
+    discord: "https://discord.gg/BKfU8xBUXA",  // Discord invite (also hard-coded in the footer social icons)
     group: ""     // EDIT: Roblox community (group) URL
   }
 };

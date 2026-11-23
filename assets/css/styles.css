@@ -118,7 +118,8 @@ h2{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:
 .journey{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:j}
 .journey li{position:relative}
 .journey .shot{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--lilac-2)}
-/* EDIT: crop focus per card via style="--pos:x% y%"; --pos-m overrides it on phones, where the card is 16:10 */
+/* EDIT: crop focus per card via style="--pos:x% y%"; --pos-m overrides it on phones, where the card is 16:10.
+   A designed 4:5 poster can keep its shape on phones with style="--ar-m:4/5" on its .shot */
 .journey .shot img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 50%)}
 .journey .num{position:absolute;left:14px;top:14px;width:44px;height:44px;font-size:1rem;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font-family:var(--display);font-weight:700;box-shadow:0 6px 18px -6px rgba(28,28,69,.6)}
 .journey h3{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:-.02em;margin:16px 0 0}
@@ -228,6 +229,10 @@ footer{background:var(--navy);color:#C9C3E8;padding:48px var(--pad) calc(40px + 
 .foot ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px}
 .foot a{color:#fff;text-decoration:none}
 .foot a:hover{text-decoration:underline}
+.foot .social{gap:10px}
+.foot .social a{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);transition:background .2s,transform .2s}
+.foot .social a:hover,.foot .social a:focus-visible{background:var(--magenta-ink);transform:translateY(-2px);text-decoration:none}
+.foot .social svg{width:20px;height:20px;fill:currentColor}
 .legal{max-width:1320px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;color:#A9A3CC}
 .legal p{margin:0 0 4px}
 .legal a{color:#fff;text-decoration:underline;text-underline-offset:3px}
@@ -254,7 +259,7 @@ footer{background:var(--navy);color:#C9C3E8;padding:48px var(--pad) calc(40px + 
   .acts{grid-template-columns:1fr}
   .act.feature{grid-column:span 1}
   .journey{grid-template-columns:1fr}
-  .journey .shot{aspect-ratio:16/10}
+  .journey .shot{aspect-ratio:var(--ar-m,16/10)}
   .journey .shot img{object-position:var(--pos-m,var(--pos,50% 50%))}
   .frame button.cover span{top:22%;width:56px;height:56px;box-shadow:0 0 0 8px rgba(232,25,125,.25)}
   .rhythm{grid-template-columns:1fr 1fr}
