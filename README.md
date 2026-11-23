@@ -4,8 +4,14 @@ The website for Meet Me There, a yacht-life roleplay experience on Roblox by
 Lockwood Publishing. It's a static site: plain HTML and CSS with a little
 JavaScript. There's no build step and no framework.
 
-Temporary home: **https://lkwd.github.io/meet-me-there/** (GitHub Pages, from
-the `main` branch). It stays there until the final domain and host are ready.
+Temporary home: **https://gate.apps.avkn.co/meet-me-there/** (the Okta gate,
+served from a copy in lkwd/avakin-prototypes). It stays there until the final
+domain and host are ready. GitHub Pages is off for this repo (2026-11-23).
+
+To publish, copy `index.html`, `404.html`, `faq/` and `assets/` into
+`avakin-prototypes/meet-me-there/`, update `repo_sha` and `published` in its
+`prototype.json` (keep its `feedback.html`), and push `main`. The gate syncs
+within 5 minutes; `https://gate.apps.avkn.co/healthz` shows the commit.
 
 ```
 index.html             home page
@@ -78,24 +84,24 @@ missing.
 
 ## Moving to the final host
 
-1. **Copy the folder.** Upload everything except `.git`, `.github` and
-   `tools` to the host's web root. All paths are relative, so it works at a
+1. **Copy the folder.** Upload everything except `.git`, `.github`,
+   `tools` and `README.md` to the host's web root. All paths are relative, so it works at a
    domain root or in a sub-folder.
 2. **Remove noindex.** Delete the `<meta name="robots" content="noindex">` line
    from `index.html` and `faq/index.html`. It keeps search engines off the
    temporary copy. Leave it in `404.html`.
 3. **Update social URLs.** Change `og:url` and `og:image` in `index.html` and
-   `faq/index.html` to full URLs on the new domain. Share previews break
-   without this.
+   `faq/index.html` to full URLs on the new domain. They point at the gate for
+   now, which is behind Okta, so share previews don't work until this is done.
 4. **Configure the host:**
    - Serve `index.html` for folder URLs, so `/faq/` loads `faq/index.html`.
      Netlify, Cloudflare Pages and nginx do this by default.
      **S3 + CloudFront with a REST origin does not:** add a CloudFront Function
      that appends `index.html` to URLs ending in `/`.
    - Use `404.html` as the error page.
-5. **Redirect the old address.** Point the GitHub Pages URL at the new
-   domain, or replace this site with a redirect page, so shared links keep
-   working.
+5. **Retire the gate copy.** Point people at the new domain and remove
+   `meet-me-there/` from lkwd/avakin-prototypes, or leave it as an internal
+   preview.
 
 ## Tracking and consent
 
