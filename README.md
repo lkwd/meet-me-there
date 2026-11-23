@@ -30,7 +30,8 @@ Then open http://localhost:8000/.
 ## Changing links
 
 All the links that aren't final yet (Play, support email, Terms, Privacy,
-Discord, Roblox group) live in `assets/js/config.js`. Each one stays **hidden**
+Roblox group) live in `assets/js/config.js`, along with the Discord invite
+(set 2026-11-23). Each one stays **hidden**
 on the site until you set it, so a visitor never sees a broken or placeholder
 link. Where a gap would look odd, a fallback shows instead:
 
@@ -39,6 +40,10 @@ link. Where a gap would look odd, a fallback shows instead:
 
 Set a value, commit, and every matching button and footer link on every page
 appears.
+
+The footer social icons (Instagram, TikTok, Twitch, YouTube, Discord) are
+plain links in the footer of `index.html` and `faq/index.html`. Change both
+pages if one moves. If the Discord invite changes, update `config.js` too.
 
 ## Editing FAQs
 
@@ -106,6 +111,10 @@ similar) must not be added until a consent setup is in place.
   composite: the 16:9 frame scaled 1.55× over a heavily blurred copy of
   itself, feathered top and bottom. Rebuild it that way if it's replaced, or
   the logo gets cropped. Card crops are set with `--pos` / `--pos-m`.
+- **Explore card (test):** `explore-social.webp` is Vanessa's 1080×1350 social
+  image, on trial since 2026-11-23. It keeps 4:5 on phones (`--ar-m:4/5` on
+  its `.shot`). To go back, point the card at `explore.webp` with
+  `style="--pos:36% 50%"` and drop `--ar-m`.
 - **Video:** the 22-second reveal trailer as WebM (VP9, about 8 MB) and MP4
   (H.264, about 9.5 MB). The trailer only
   downloads when someone presses play. Without JavaScript, the native video
