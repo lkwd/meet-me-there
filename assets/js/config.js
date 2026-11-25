@@ -8,7 +8,7 @@ window.MMT = {
   launchAt: "2026-11-09T00:00:00Z",
 
   links: {
-    play: "",     // EDIT: Roblox experience URL or the tracking redirect, e.g. https://www.roblox.com/games/123456789
+    play: "https://www.roblox.com/games/82055512169089/Meet-Me-There",  // Roblox experience
     support: "",  // EDIT: support email address only, e.g. help@example.org (becomes a mailto: link)
     terms: "",    // EDIT: Terms of Service URL
     privacy: "",  // EDIT: Privacy Policy URL

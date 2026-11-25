@@ -77,7 +77,7 @@ missing.
 2. **Launch time:** confirm `launchAt` in `config.js` (UTC). The "All aboard"
    line switches to "Now open on Roblox" at that moment.
 3. **FAQs:** final copy replaces the draft block.
-4. **Events, activity statuses, Founding Crew benefits:** confirm the copy in
+4. **Activity statuses, Founding Crew benefits:** confirm the copy in
    `index.html` (search for `EDIT:`).
 5. **Trailer captions:** the trailer has an audio track. If it includes speech
    or lyrics, add a WebVTT `<track kind="captions">` to the `<video>`.
@@ -87,9 +87,9 @@ missing.
 1. **Copy the folder.** Upload everything except `.git`, `.github`,
    `tools` and `README.md` to the host's web root. All paths are relative, so it works at a
    domain root or in a sub-folder.
-2. **Remove noindex.** Delete the `<meta name="robots" content="noindex">` line
-   from `index.html` and `faq/index.html`. It keeps search engines off the
-   temporary copy. Leave it in `404.html`.
+2. **Indexing.** `index.html` and `faq/index.html` carry
+   `<meta name="robots" content="index, follow">` (since 2026-11-25). Keep it.
+   `404.html` stays `noindex`.
 3. **Update social URLs.** Change `og:url` and `og:image` in `index.html` and
    `faq/index.html` to full URLs on the new domain. They point at the gate for
    now, which is behind Okta, so share previews don't work until this is done.
