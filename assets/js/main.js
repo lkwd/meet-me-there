@@ -11,7 +11,11 @@ var MMT = window.MMT || { links: {} };
     if (!k) return;
     var a = el.matches("a") ? el : el.querySelector("a");
     var v = links[k].trim();
-    if (a) a.href = k === "support" ? "mailto:" + v : v;
+    if (a) {
+      a.href = k === "support" ? "mailto:" + v : v;
+      // Off-site links (Roblox, Discord, terms) open in a new tab so the site stays open.
+      if (a.host && a.host !== location.host) { a.target = "_blank"; a.rel = "noopener"; }
+    }
     el.hidden = false;
   });
   // A fallback lists one or more keys and shows only while all of them are empty.
