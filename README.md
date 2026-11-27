@@ -4,14 +4,16 @@ The website for Meet Me There, a yacht-life roleplay experience on Roblox by
 Lockwood Publishing. It's a static site: plain HTML and CSS with a little
 JavaScript. There's no build step and no framework.
 
-Temporary home: **https://gate.apps.avkn.co/meet-me-there/** (the Okta gate,
-served from a copy in lkwd/avakin-prototypes). It stays there until the final
-domain and host are ready. GitHub Pages is off for this repo (2026-11-23).
+Live at **https://gomeetmethere.com/** (S3 behind CloudFront; `http://` and
+`www.` redirect to it). Nishant deploys it. CloudFront caches pages for up to
+a day (`s-maxage=86400`), so invalidate `/*` after each upload.
 
-To publish, copy `index.html`, `404.html`, `faq/` and `assets/` into
+An internal preview copy also lives on the Okta gate at
+https://gate.apps.avkn.co/meet-me-there/ (from lkwd/avakin-prototypes). To
+refresh it, copy `index.html`, `404.html`, `faq/` and `assets/` into
 `avakin-prototypes/meet-me-there/`, update `repo_sha` and `published` in its
-`prototype.json` (keep its `feedback.html`), and push `main`. The gate syncs
-within 5 minutes; `https://gate.apps.avkn.co/healthz` shows the commit.
+`prototype.json` (keep its `feedback.html`), and push `main`. GitHub Pages is
+off for this repo (2026-11-23).
 
 ```
 index.html             home page
@@ -82,26 +84,22 @@ missing.
 5. **Trailer captions:** the trailer has an audio track. If it includes speech
    or lyrics, add a WebVTT `<track kind="captions">` to the `<video>`.
 
-## Moving to the final host
+## Hosting (gomeetmethere.com)
 
-1. **Copy the folder.** Upload everything except `.git`, `.github`,
-   `tools` and `README.md` to the host's web root. All paths are relative, so it works at a
-   domain root or in a sub-folder.
+1. **Upload.** Copy everything except `.git`, `.github`, `tools` and
+   `README.md` to the bucket root, then invalidate `/*` in CloudFront. All
+   paths are relative, so the same files also work in a sub-folder (the gate).
 2. **Indexing.** `index.html` and `faq/index.html` carry
-   `<meta name="robots" content="index, follow">` (since 2026-11-25). Keep it.
-   `404.html` stays `noindex`.
-3. **Update social URLs.** Change `og:url` and `og:image` in `index.html` and
-   `faq/index.html` to full URLs on the new domain. They point at the gate for
-   now, which is behind Okta, so share previews don't work until this is done.
-4. **Configure the host:**
-   - Serve `index.html` for folder URLs, so `/faq/` loads `faq/index.html`.
-     Netlify, Cloudflare Pages and nginx do this by default.
-     **S3 + CloudFront with a REST origin does not:** add a CloudFront Function
-     that appends `index.html` to URLs ending in `/`.
-   - Use `404.html` as the error page.
-5. **Retire the gate copy.** Point people at the new domain and remove
-   `meet-me-there/` from lkwd/avakin-prototypes, or leave it as an internal
-   preview.
+   `<meta name="robots" content="index, follow">` and a canonical link to
+   gomeetmethere.com. `404.html` stays `noindex`. `robots.txt` points crawlers
+   at `sitemap.xml`; add any new page to the sitemap.
+3. **Social previews.** `og:url`, `og:image` and the canonical link are full
+   URLs on gomeetmethere.com (since 2026-11-27). Keep them absolute: Slack,
+   Discord and Facebook ignore relative image URLs. After changing the image,
+   re-scrape it in the Facebook Sharing Debugger, as previews are cached.
+4. **Host behaviour (already set up, 2026-11-27):** folder URLs serve
+   `index.html` (`/faq/` loads `faq/index.html`), `/faq` redirects to `/faq/`,
+   and unknown paths return `404.html` with a 404 status.
 
 ## Tracking and consent
 
