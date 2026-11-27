@@ -5,7 +5,7 @@
 window.MMT = {
   // EDIT: confirm the exact launch time. Written in UTC ("Z"); the "All aboard" line
   // switches to "Now open on Roblox" at this moment for every visitor.
-  launchAt: "2026-11-09T00:00:00Z",
+  launchAt: "2026-12-02T00:00:00Z",
 
   links: {
     play: "https://www.roblox.com/games/82055512169089/Meet-Me-There",  // Roblox experience

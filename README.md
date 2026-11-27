@@ -43,7 +43,7 @@ Roblox group) live in `assets/js/config.js`, along with the Discord invite
 on the site until you set it, so a visitor never sees a broken or placeholder
 link. Where a gap would look odd, a fallback shows instead:
 
-- With no Play link, the hero shows "Launching 9 November on Roblox".
+- With no Play link, the hero shows "Launching 2 December on Roblox".
 - With no support email, "Still need help?" points to Roblox Support.
 
 Set a value, commit, and every matching button and footer link on every page
